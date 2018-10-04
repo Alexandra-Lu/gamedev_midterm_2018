@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
 	private RaycastHit hit;
 	private LayerMask mask;
+
+	public Transform AttachMe;
 	
 	// Use this for initialization
 	void Start ()
@@ -14,17 +17,25 @@ public class Pickup : MonoBehaviour
 		mask = LayerMask.GetMask("Items");
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			if (Physics.Raycast(transform.position, transform.forward,
-				out hit, Mathf.Infinity, mask.value))
+		//define
+		Ray myRay = new Ray(transform.position, transform.forward);
+		//set max distance
+		float maxRayDistance = 3f;
+
+		
+			if (Input.GetMouseButtonDown(0))
 			{
-				Destroy((hit.transform.gameObject));
-				//this.transform.parent = transform;
+				if (Physics.Raycast(myRay, out hit, maxRayDistance, mask.value))
+				{
+					Debug.Log("munch munch");
+				//	hit.transform.SetParent(this);
+				}
+
 			}
+		
 		}
+	
 	}
-}
+
