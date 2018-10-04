@@ -8,6 +8,7 @@ public class Pickup : MonoBehaviour
 {
 	private RaycastHit hit;
 	private LayerMask mask;
+	private GameObject holding;
 
 	public Transform AttachMe;
 	
@@ -25,17 +26,23 @@ public class Pickup : MonoBehaviour
 		float maxRayDistance = 3f;
 
 		
-			if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0)&& holding ==null)		
+		{
+			
+			if (Physics.Raycast(myRay, out hit, maxRayDistance, mask.value))
 			{
-				if (Physics.Raycast(myRay, out hit, maxRayDistance, mask.value))
-				{
-					Debug.Log("munch munch");
-				//	hit.transform.SetParent(this);
-				}
-
+				Debug.Log("munch");
+				holding = hit.transform.gameObject;
+				holding.transform.SetParent(transform); //this but  not
 			}
-		
 		}
-	
+
+		if (holding != null)
+		{
+			holding.transform.position = Vector3.Lerp(holding.transform.position, AttachMe.position, .1f);
+		}
+		
 	}
+	
+}
 
