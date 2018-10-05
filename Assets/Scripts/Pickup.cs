@@ -36,13 +36,15 @@ public class Pickup : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))		
 		{
 
-			if (holding == null)
+			if (holding == null) //if not already holding item
 			{
 				if (Physics.Raycast(myRay, out hit, maxRayDistance, itemMask.value))
 				{
 					Debug.Log("pick up object");
+					//sets the "holding" variable to the item the ray hits
 					holding = hit.transform.gameObject;
-					holding.transform.SetParent(transform); //this but  not
+					//parented by the camera
+					holding.transform.SetParent(transform); //"this" but  not
 				}
 			}
 
@@ -50,17 +52,22 @@ public class Pickup : MonoBehaviour
 			{
 				if (Physics.Raycast(myRay, maxRayDistance, suitcaseMask.value))
 				{
+				
 					Debug.Log("put down object");
+					//un-parent item from the camera
 					holding.transform.SetParent(null);
+					//move the item to the empty positioned over the suitcase
 					holding.transform.position = BoopOverTheSuitcase.position;
+					//add rigidbody to activate gravity, so it falls into the suitcase
 					holding.AddComponent<Rigidbody>();
+					//back to holding nothing!
 					holding = null;
 
 				}
 			}
 		}
 
-		if (holding != null)   //so if holding
+		if (holding != null)   //so if holding item, parent it to the empty on the player
 		{
 			holding.transform.position = Vector3.Lerp(holding.transform.position, AttachMe.position, .1f);
 		}
