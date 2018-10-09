@@ -65,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Reticle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="656">
               <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
               <folding>
                 <marker date="1538713137519" expanded="true" signature="6:123" ph="..." />
@@ -152,7 +152,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="315" />
     <option name="y" value="110" />
     <option name="width" value="1440" />
@@ -222,12 +222,12 @@
       <workItem from="1538425180048" duration="10072000" />
       <workItem from="1538499363659" duration="31000" />
       <workItem from="1538499411145" duration="573000" />
-      <workItem from="1538678116773" duration="12663000" />
+      <workItem from="1538678116773" duration="13337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25146000" />
+    <option name="totallyTimeSpent" value="25820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -239,7 +239,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20134228" />
@@ -320,6 +320,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Reticle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+          <folding>
+            <marker date="1538713137519" expanded="true" signature="6:123" ph="..." />
+            <marker date="1538713137519" expanded="true" signature="162:938" ph="{...}" />
+            <marker date="1538713137519" expanded="true" signature="268:363" ph="{...}" />
+            <marker date="1538713137519" expanded="true" signature="386:936" ph="{...}" />
+            <marker date="1538713137519" expanded="true" signature="516:577" ph="/* shooty shooty shoot ... */" />
+            <marker date="1538713137519" expanded="true" signature="639:678" ph="{...}" />
+            <marker date="1538713137519" expanded="true" signature="797:838" ph="{...}" />
+            <marker date="1538713137519" expanded="true" signature="893:933" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -331,23 +348,6 @@
             <marker date="1538441044913" expanded="true" signature="275:418" ph="{...}" />
             <marker date="1538441044913" expanded="true" signature="293:377" ph="{...}" />
             <marker date="1538441044913" expanded="true" signature="384:415" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Reticle.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-          <folding>
-            <marker date="1538713137519" expanded="true" signature="6:123" ph="..." />
-            <marker date="1538713137519" expanded="true" signature="162:938" ph="{...}" />
-            <marker date="1538713137519" expanded="true" signature="268:363" ph="{...}" />
-            <marker date="1538713137519" expanded="true" signature="386:936" ph="{...}" />
-            <marker date="1538713137519" expanded="true" signature="516:577" ph="/* shooty shooty shoot ... */" />
-            <marker date="1538713137519" expanded="true" signature="639:678" ph="{...}" />
-            <marker date="1538713137519" expanded="true" signature="797:838" ph="{...}" />
-            <marker date="1538713137519" expanded="true" signature="893:933" ph="{...}" />
           </folding>
         </state>
       </provider>
