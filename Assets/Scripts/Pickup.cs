@@ -30,7 +30,7 @@ public class Pickup : MonoBehaviour
 		//define
 		Ray myRay = new Ray(transform.position, transform.forward);
 		//set max distance
-		float maxRayDistance = 3f;
+		float maxRayDistance = 4f;
 
 		
 		if (Input.GetMouseButtonDown(0))		
@@ -60,6 +60,10 @@ public class Pickup : MonoBehaviour
 					holding.transform.position = BoopOverTheSuitcase.position;
 					//add rigidbody to activate gravity, so it falls into the suitcase
 					holding.AddComponent<Rigidbody>();
+
+					//when item is placed into suitcase, cross it off the list
+					holding.GetComponent<ItemList>().collected = true;
+					
 					//back to holding nothing!
 					holding = null;
 
