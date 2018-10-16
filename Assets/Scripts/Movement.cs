@@ -7,20 +7,35 @@ public class Movement : MonoBehaviour {
 	
 
 	public float moveSpeed = 7.5f;
+	float verticalLook = 0f;
 	
 	//this variable will remember input and pass it to physics
 	Vector3 inputVector;
 	void Update () {
-		//get mouse input
-		//these are mouse "deltas"       delta = difference (will be 0 when nothing is moving
-		
-		float mouseX = Input.GetAxis("Mouse X");
-		float mouseY = Input.GetAxis("Mouse Y");
-		
-		//rotate the camera based on mouse input
-		//first, rotate body based on horizontal mouse movement
-		transform.Rotate( 0f, (mouseX *3), 0f);
-		Camera.main.transform.Rotate((-mouseY *6), 0f, 0f);
+		float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * 100f; // horizontal mouse movement
+		float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * 100f; // vertical mouse movement
+
+
+		// rotate the camera based on mouse input
+		// first, rotate body based on horizontal mouse movement
+		transform.Rotate(0f, mouseX, 0f); //yaw
+		Camera.main.transform.Rotate(-mouseY, 0f, 0f);
+
+		//BETTER MOUSE LOOK
+		//add mouse input to verical look, then clamp vertical look
+		verticalLook += -mouseY;
+		verticalLook = Mathf.Clamp(verticalLook, -80f, 80f);
+
+		//actually apply verticalLook to rotation
+		Camera.main.transform.localEulerAngles = new Vector3(verticalLook, 0f, 0f);
+	
+		//BETTER MOUSE LOOk
+		// lock and hide the mouse cursor, if they click their mouse
+		if (Input.GetMouseButton(0))
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
 
 		
 		//WASD Movement

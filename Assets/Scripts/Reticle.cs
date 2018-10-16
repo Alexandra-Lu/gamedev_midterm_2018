@@ -37,7 +37,7 @@ public class Reticle : MonoBehaviour {
 		}
 
 		//if ray collides with suitcase, turn yellow
-		else if (Physics.Raycast(myRay, maxRayDistance, suitcaseMask.value))
+		else if (Physics.Raycast(myRay, maxRayDistance*4, suitcaseMask.value))
 		{
 			reticle.color = Color.yellow;
 		}

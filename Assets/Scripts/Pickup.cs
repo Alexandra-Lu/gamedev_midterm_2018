@@ -50,7 +50,7 @@ public class Pickup : MonoBehaviour
 
 			else
 			{
-				if (Physics.Raycast(myRay, maxRayDistance, suitcaseMask.value))
+				if (Physics.Raycast(myRay, maxRayDistance*3, suitcaseMask.value))
 				{
 				
 					Debug.Log("put down object");
@@ -63,6 +63,9 @@ public class Pickup : MonoBehaviour
 
 					//when item is placed into suitcase, cross it off the list
 					holding.GetComponent<ItemList>().collected = true;
+
+					//keep track of amount of items collected
+					ItemList.amtCollected++;
 					
 					//back to holding nothing!
 					holding = null;

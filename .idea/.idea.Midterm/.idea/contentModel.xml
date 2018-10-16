@@ -12,6 +12,7 @@
           <e p="Movement.cs" t="Include" />
           <e p="Pickup.cs" t="Include" />
           <e p="Reticle.cs" t="Include" />
+          <e p="SceneChange.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
         </e>
       </e>
